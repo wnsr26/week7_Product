@@ -1,0 +1,16 @@
+
+<div class="d-flex flex-row bd-highlight justify-content-center mb-3">
+  <div *ngFor="let p of products">
+    <div *ngIf="p.stock > 0">
+      <div class="card mx-2" style="width: 18rem;">
+
+        <img [src]="p.picture" class="card-img-top" alt="...">
+        <div class="card-body text-center">
+          <h5 class="card-title">{{p.name}}</h5>
+          <p>{{p.price}}<span class="text-primary">Bath</span></p>
+          <a routerLink="/cart" class="btn btn-success">Buy</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
